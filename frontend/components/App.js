@@ -1,23 +1,22 @@
-import React, {useEffect} from 'react';
-import PokeSearchForm from './childComponents/PokeSearchForm';
+
+import React from 'react';
+import './App.css'
+import '../index.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';// Import the new SearchPage component
 import { connect } from 'react-redux';
-import { fetchPokemon } from './actions'; // Import your action creator
-import PokeList from './childComponents/PokeList';
-function App(props) {
-  const { loading, fetchPokemon} = props;
-
-   useEffect(() => {
-    // Call the fetchPokemon action with any necessary data
-  fetchPokemon();
-  }, []);
-
+import { fetchPokemon } from './actions' 
+import HomePage from './Routes/HomePage';
+import SearchPage from './Routes/SearchPage';
+function App() {
   return (
-    <div className="App">
-      <h1 className='heading1'>Pokemon Card Finder!!</h1>
-      <PokeSearchForm />
-      {loading ? <h3> Gotta Load em all</h3> : <PokeList />}
-      
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/search" element={<SearchPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
@@ -25,6 +24,5 @@ const mapStateToProps = state => ({
   loading: state.loading,
 });
 
-
-
 export default connect(mapStateToProps, {fetchPokemon})(App);
+
