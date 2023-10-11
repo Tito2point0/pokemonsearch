@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchPokemon } from '../actions';
+import { fetchPokemon } from '../actions/action';
 import { useState } from 'react';
 function PokeSearchForm(props) {
   const [searchTerm, setSearchTerm ] = useState('')

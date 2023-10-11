@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 // import './index.css';
 import PokeSearchForm from '../childComponents/PokeSearchForm';
 import { connect } from 'react-redux';
-import { fetchPokemon } from '../actions';
+import { fetchPokemon } from '../actions/action';
 import PokeList from '../childComponents/PokeList';
 
 function SearchPage(props) {
