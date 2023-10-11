@@ -1,4 +1,4 @@
-import { FETCH_POKEMON_FAILURE, FETCH_POKEMON_REQUEST, FETCH_POKEMON_SUCCESS } from "../actions";
+import { FETCH_POKEMON_FAILURE, FETCH_POKEMON_REQUEST, FETCH_POKEMON_SUCCESS } from "../actions/action";
   
   const initialState = {// Initialize searchTerm to an empty string
     pokemon: [],

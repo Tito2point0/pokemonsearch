@@ -4,7 +4,7 @@ import './App.css'
 import "../index.css"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';// Import the new SearchPage component
 import { connect } from 'react-redux';
-import { fetchPokemon } from './actions' 
+import { fetchPokemon } from './actions/action' 
 import HomePage from './Routes/HomePage';
 import SearchPage from './Routes/SearchPage';
 function App() {
