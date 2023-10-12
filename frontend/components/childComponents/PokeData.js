@@ -145,15 +145,15 @@ const PokeData = ({ pokemons }) => {
       {pokemons.cardmarket && (
         <div className="container">
           <h4>CardMarket Data:</h4>
-          <p>URL: {pokemons.cardmarket.url}</p>
-          <p>Updated At: {pokemons.cardmarket.updatedAt}</p>
+          {/* <p>URL: {pokemons.cardmarket.url}</p>
+          <p>Updated At: {pokemons.cardmarket.updatedAt}</p> */}
           {pokemons.cardmarket.prices && (
             <div>
-              <h5>Prices:</h5>
+              {/* <h5>Prices:</h5>
               <p>Average Sell Price: {pokemons.cardmarket.prices.averageSellPrice}</p>
               <p>Low Price: {pokemons.cardmarket.prices.lowPrice}</p>
               <p>Trend Price: {pokemons.cardmarket.prices.trendPrice}</p>
-              {/* <p>Images: {pokemons.images.small}</p> */}
+              <p>Images: {pokemons.images.small}</p>  */}
             </div>
           )}
             {pokemons.images && (
