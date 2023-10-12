@@ -152,3 +152,11 @@ body {
 	border-radius: 5px;  
 }
   
+.centered-image {
+	display: block;
+	margin: auto;
+	border: 4px groove #ff0000; /* Apply grove-style border */
+	padding: 10px; /* Add some padding for spacing */
+	max-width: 100%; /* Set maximum width to fit container */
+  }
+  
