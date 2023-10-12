@@ -143,7 +143,7 @@ const PokeData = ({ pokemons }) => {
       )} */}
 
       {pokemons.cardmarket && (
-        <div className="container">
+        <div className="container2">
           <h4>CardMarket Data:</h4>
           {/* <p>URL: {pokemons.cardmarket.url}</p>
           <p>Updated At: {pokemons.cardmarket.updatedAt}</p> */}
@@ -159,8 +159,8 @@ const PokeData = ({ pokemons }) => {
             {pokemons.images && (
         <div>
           <h4>Images:</h4>
-          <img src={pokemons.images.small} alt="Small" />
-          <img src={pokemons.images.large} alt="Large" />
+          <img className="centered-image red-border" src={pokemons.images.small} alt="Small" />
+          <img  className="centered-image red-border" src={pokemons.images.large} alt="Large" />
         </div>
           )}
         </div>
