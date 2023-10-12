@@ -6,6 +6,30 @@ body {
 	color: #fff;
 }
 
+/* Media Query for Small Screens (e.g., Mobile Devices) */
+@media (max-width: 767px) {
+	body {
+	  font-size: 1em; /* Adjust font size for smaller screens */
+	  /* Add any other mobile-specific styles here */
+	}
+  
+	.heading1 {
+	  font-size: 20px; /* Adjust heading font size for smaller screens */
+	  /* Add any other mobile-specific styles here */
+	}
+  
+	/* Add other styles specific to small screens as needed */
+  }
+  
+  /* Media Query for Medium Screens (e.g., Tablets) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+	/* Add styles specific to medium-sized screens here */
+  }
+  
+  /* Media Query for Large Screens (e.g., Desktops) */
+  @media (min-width: 1024px) {
+	/* Add styles specific to large screens here */
+  }
 /* Import the custom font using @font-face */
 @font-face {
 	font-family: 'PokemonSolid';
@@ -31,24 +55,17 @@ body {
   .icon img {
 	width: 100px; /* Set the width of the icon */
   }
-  .container {
-	display: grid;
-	grid-template-columns: 1fr 1fr; /* Two columns of equal width */
-	grid-gap: 20px; /* Add some spacing between elements */
-  }
+  
   .section {
 	font-family: Arial, sans-serif;
 	font-size: 16px;
 	margin-bottom: 20px;
-  }
-  .section {
-	background-color: #f9f9f9; /* Light gray background */
-	color: #333; /* Dark text color */
-  }
-  .section {
 	border: 1px solid #ccc; /* Add a border around the section */
 	padding: 10px; /* Add padding inside the section */
-  }
+	background-color: #f9f9f9; /* Light gray background */
+	color: #333;   
+}
+ 
   .button {
 	display: inline-block;
 	padding: 10px 20px;
@@ -118,4 +135,20 @@ body {
 	display: inline-block; /* Make the border fit the content width */
 	border-radius: 5px; /* Optional: Add rounded corners */
   }
+  
+  .container2 {
+	border: 2px solid #007bff; /* Light blue border for container2 */
+	padding: 10px; /* Add padding for spacing */
+	text-align: center; /* Center the content */
+	background-color: rgba(255, 0, 0, 0.1); /* Light red background color with opacity */
+	border-radius: 5px;
+  }
+  
+  .container {
+	border: 2px solid red; /* Red border for container1 */
+	padding: 10px; /* Add padding for spacing */
+	text-align: center; /* Center the content */
+	background-color: rgba(0, 123, 255, 0.1); /* Light blue background color with opacity */
+	border-radius: 5px;  
+}
   
