@@ -6,6 +6,30 @@ body {
 	color: #fff;
 }
 
+/* Media Query for Small Screens (e.g., Mobile Devices) */
+@media (max-width: 767px) {
+	body {
+	  font-size: 1em; /* Adjust font size for smaller screens */
+	  /* Add any other mobile-specific styles here */
+	}
+  
+	.heading1 {
+	  font-size: 20px; /* Adjust heading font size for smaller screens */
+	  /* Add any other mobile-specific styles here */
+	}
+  
+	/* Add other styles specific to small screens as needed */
+  }
+  
+  /* Media Query for Medium Screens (e.g., Tablets) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+	/* Add styles specific to medium-sized screens here */
+  }
+  
+  /* Media Query for Large Screens (e.g., Desktops) */
+  @media (min-width: 1024px) {
+	/* Add styles specific to large screens here */
+  }
 /* Import the custom font using @font-face */
 @font-face {
 	font-family: 'PokemonSolid';
