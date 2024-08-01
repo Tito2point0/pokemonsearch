@@ -49,3 +49,61 @@ export const fetchPokemon = (searchTerm) => {
       });
   };
 };
+/*// actions.js
+import axios from 'axios';
+
+// Action Types
+export const FETCH_POKEMON_REQUEST = 'FETCH_POKEMON_REQUEST';
+export const FETCH_POKEMON_SUCCESS = 'FETCH_POKEMON_SUCCESS';
+export const FETCH_POKEMON_FAILURE = 'FETCH_POKEMON_FAILURE';
+
+export const fetchPokemonRequest = () => ({
+  type: FETCH_POKEMON_REQUEST,
+});
+
+export const fetchPokemonSuccess = (data, page, totalPages) => ({
+  type: FETCH_POKEMON_SUCCESS,
+  payload: { data, page, totalPages },
+});
+
+export const fetchPokemonFailure = (error) => ({
+  type: FETCH_POKEMON_FAILURE,
+  payload: error,
+});
+
+// Utility function to build query string
+const buildQueryString = (searchTerm, type, rarity) => {
+  let query = `name:"${searchTerm}"`;
+  if (type) query += ` type:"${type}"`;
+  if (rarity) query += ` rarity:"${rarity}"`;
+  return query;
+};
+
+// Thunk Action Creator for fetching Pokemon
+export const fetchPokemon = (searchTerm, type, rarity, page = 1, pageSize = 15) => {
+  return (dispatch) => {
+    dispatch(fetchPokemonRequest());
+
+    const queryString = buildQueryString(searchTerm, type, rarity);
+    const apiKey = process.env.REACT_APP_API_KEY;  // Ensure your .env file is set up correctly
+
+    axios
+      .get(`https://api.pokemontcg.io/v2/cards?q=${queryString}&limit=${pageSize}&offset=${(page - 1) * pageSize}`, {
+        headers: {
+          'X-Api-Key': apiKey,
+        },
+      })
+      .then((response) => {
+        const { data, count } = response.data;
+        const totalPages = Math.ceil(count / pageSize);
+
+        // Dispatch success action with the received data and pagination info
+        dispatch(fetchPokemonSuccess(data, page, totalPages));
+      })
+      .catch((error) => {
+        // Dispatch failure action with the error message
+        dispatch(fetchPokemonFailure(error.message));
+      });
+  };
+};
+//   */
