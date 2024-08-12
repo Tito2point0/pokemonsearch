@@ -1,20 +1,19 @@
+/* Ensure the image path is correct */
 .App {
   text-align: center;
+  background-image: url('../images/399bd40f-4b8a-4983-ba2e-20c6730c814f.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  /* Added z-index and position */
+  position: relative;
+  z-index: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Ensure this doesn’t override the parent background */
 .App-header {
-  background-color: #282c34;
+  background-color: transparent; /* Change from #282c34 to transparent */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,16 +23,12 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Additional adjustments to ensure visibility */
+.heading1 {
+  color: #180f0f;
+  padding: 20px;
+  font-family: 'PokemonSolid', sans-serif;
+  font-size: 24px;
+  z-index: 2; /* Ensure it is above other elements */
+  position: relative;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-

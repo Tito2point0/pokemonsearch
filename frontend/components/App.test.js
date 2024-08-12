@@ -25,5 +25,5 @@ test('renders the App component wrapped in Provider', () => {
     );
     expect(getByText(/Pokemon Search/i)).toBeInTheDocument();
   }
-    
+)
 });
